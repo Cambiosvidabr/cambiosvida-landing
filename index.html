@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambios Vida — Casa de Cambio BRL ⇄ VES</title>
+  <meta name="description" content="Casa de cambio entre reales brasileños y bolívares venezolanos. Servicio confiable en la frontera Brasil–Venezuela. Pacaraima, Roraima." />
+  <meta name="theme-color" content="#0E4A3A" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cambios Vida — Casa de Cambio BRL ⇄ VES" />
+  <meta property="og:description" content="Tu puente financiero entre Brasil y Venezuela. Cambios rápidos, seguros y con atención personalizada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cambiosvida.com.br" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #FEFCF7;
+      --bg-dark: #0E4A3A;
+      --bg-darker: #0A3329;
+      --surface: #F5F1E8;
+      --surface-2: #EBE5D4;
+      --gold: #C8A561;
+      --gold-light: #E4CC99;
+      --ink: #121212;
+      --ink-muted: #5B5B53;
+      --border: #E0D9C4;
+      --cream: #FAF6EB;
+      --shadow-sm: 0 1px 2px rgba(14, 74, 58, 0.06);
+      --shadow-md: 0 4px 16px rgba(14, 74, 58, 0.08);
+      --shadow-lg: 0 12px 40px rgba(14, 74, 58, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 40px);
+    }
+
+    /* ===== Topbar ===== */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(254, 252, 247, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      box-shadow: inset 0 0 0 2px var(--gold);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 19px;
+      letter-spacing: -0.01em;
+    }
+
+    .logo-tagline {
+      font-size: 11px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: var(--bg-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 14.5px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--bg-dark);
+      color: var(--cream);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      background: var(--bg-darker);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      background: var(--surface);
+    }
+
+    @media (max-width: 720px) {
+      .nav a:not(.btn) { display: none; }
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      padding: clamp(60px, 10vw, 120px) 0 clamp(80px, 12vw, 140px);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 800px 400px at 85% 20%, rgba(200, 165, 97, 0.08), transparent),
+        radial-gradient(ellipse 600px 300px at 15% 80%, rgba(14, 74, 58, 0.05), transparent);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      letter-spacing: 0.02em;
+      margin-bottom: 28px;
+    }
+
+    .hero-eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3BB273;
+      box-shadow: 0 0 0 4px rgba(59, 178, 115, 0.15);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(59, 178, 115, 0.15); }
+      50% { box-shadow: 0 0 0 8px rgba(59, 178, 115, 0.05); }
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--bg-dark);
+      font-variation-settings: "SOFT" 100;
+    }
+
+    .hero h1 .swap {
+      display: inline-block;
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin: 0 6px;
+    }
+
+    .hero-sub {
+      font-size: clamp(17px, 2vw, 20px);
+      color: var(--ink-muted);
+      max-width: 620px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 40px;
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item .num {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--bg-dark);
+      line-height: 1;
+    }
+
+    .hero-meta-item .label {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-top: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== Section base ===== */
+    section {
+      padding: clamp(60px, 9vw, 110px) 0;
+    }
+
+    .section-eyebrow {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--bg-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--bg-dark);
+    }
+
+    .section-lead {
+      font-size: 18px;
+      color: var(--ink-muted);
+      max-width: 640px;
+      margin-bottom: 64px;
+    }
+
+    /* ===== Services ===== */
+    .services {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--bg-dark);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 24px;
+      box-shadow: inset 0 0 0 1px var(--gold);
+    }
+
+    .service-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--ink-muted);
+      font-size: 15.5px;
+      line-height: 1.6;
+    }
+
+    /* ===== Steps ===== */
+    .steps-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .steps-wrap { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .steps-list {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .step:first-child { border-top: none; padding-top: 0; }
+
+    .step-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 42px;
+      color: var(--gold);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .step-num::before { content: "0" counter(step); }
+
+    .step h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--ink-muted);
+      font-size: 15.5px;
+    }
+
+    /* ===== About ===== */
+    .about {
+      background: var(--bg-dark);
+      color: var(--cream);
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 90% 10%, rgba(200, 165, 97, 0.12), transparent),
+        radial-gradient(ellipse 500px 300px at 10% 90%, rgba(200, 165, 97, 0.06), transparent);
+      pointer-events: none;
+    }
+
+    .about .section-title {
+      color: var(--cream);
+    }
+
+    .about .section-title em {
+      color: var(--gold-light);
+    }
+
+    .about .section-eyebrow {
+      color: var(--gold-light);
+    }
+
+    .about-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .about-text p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(250, 246, 235, 0.85);
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 36px;
+      background: rgba(250, 246, 235, 0.04);
+      border: 1px solid rgba(200, 165, 97, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+    }
+
+    .about-stat .num {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      font-weight: 500;
+      color: var(--gold-light);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .about-stat .lbl {
+      font-size: 13px;
+      color: rgba(250, 246, 235, 0.7);
+      margin-top: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== Contact ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--cream);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+
+    .contact-card .label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--bg-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+
+    .contact-card .value {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 14px;
+      word-break: break-word;
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+    }
+
+    a.contact-card .value:hover {
+      color: var(--bg-dark);
+    }
+
+    .contact-card .detail {
+      font-size: 14.5px;
+      color: var(--ink-muted);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--bg-darker);
+      color: rgba(250, 246, 235, 0.7);
+      padding: 60px 0 40px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 720px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    footer h5 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 16px;
+    }
+
+    footer .footer-brand p {
+      color: rgba(250, 246, 235, 0.6);
+      margin-top: 12px;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 8px; }
+    footer a {
+      color: rgba(250, 246, 235, 0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--gold-light); }
+
+    .legal {
+      border-top: 1px solid rgba(200, 165, 97, 0.15);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(250, 246, 235, 0.5);
+    }
+
+    /* ===== Float WhatsApp ===== */
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 99;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.08);
+    }
+
+    .float-wa svg { width: 28px; height: 28px; fill: white; }
+
+    /* ===== Reveal animation ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="logo">
+        <div class="logo-mark">CV</div>
+        <div class="logo-text">
+          <span class="logo-name">Cambios Vida</span>
+          <span class="logo-tagline">BRL ⇄ VES</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn-ghost">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span>Atención activa — Pacaraima · Roraima · Brasil</span>
+        </div>
+
+        <h1>
+          Tu puente financiero <em>entre Brasil</em><br />
+          y <em>Venezuela.</em>
+        </h1>
+
+        <p class="hero-sub">
+          Cambio de reales brasileños <span style="color:var(--bg-dark); font-weight:600;">⇄</span> bolívares venezolanos con atención personalizada, tasas justas y rapidez. Operando con Pix y todos los bancos venezolanos.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://wa.me/5595991460413?text=Hola,%20vengo%20de%20cambiosvida.com.br" class="btn btn-primary" rel="noopener">
+            Hablar por WhatsApp
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#como" class="btn btn-ghost">Cómo funciona</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <div class="num">Pix</div>
+            <div class="label">Recepción instantánea</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="num">24/7</div>
+            <div class="label">Atención todos los días</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="num">CNPJ</div>
+            <div class="label">Empresa registrada en Brasil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-eyebrow">Servicios</div>
+      <h2 class="section-title">Operaciones <em>simples y claras.</em></h2>
+      <p class="section-lead">
+        Tres formas de mover tu dinero entre Brasil y Venezuela, adaptadas a lo que necesites en cada momento.
+      </p>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">→</div>
+          <h3>Brasil → Venezuela</h3>
+          <p>Envía reales desde Brasil y recibe bolívares en Venezuela. Aceptamos Pix y acreditamos en Pago Móvil, Banesco, Mercantil, Venezuela y otros bancos venezolanos.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">←</div>
+          <h3>Venezuela → Brasil</h3>
+          <p>Envías bolívares desde Venezuela y recibes reales en tu cuenta brasileña vía Pix. Confirmación y liberación el mismo día hábil.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">$</div>
+          <h3>Detal y efectivo</h3>
+          <p>Cambio al detal en Pacaraima. Atendemos clientes en frontera con tasas preferenciales para montos frecuentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como">
+    <div class="container">
+      <div class="steps-wrap">
+        <div>
+          <div class="section-eyebrow">Cómo funciona</div>
+          <h2 class="section-title">En <em>cuatro pasos,</em> listo.</h2>
+          <p class="section-lead">
+            Un proceso directo, sin formularios complejos ni esperas innecesarias. Nuestra atención es por WhatsApp, donde puedes consultar la tasa del día y coordinar tu operación.
+          </p>
+          <a href="https://wa.me/5595991460413?text=Hola,%20quiero%20cotizar%20un%20cambio" class="btn btn-primary">
+            Cotizar ahora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <ol class="steps-list">
+          <li class="step">
+            <div class="step-num"></div>
+            <div>
+              <h4>Consulta la tasa</h4>
+              <p>Escríbenos por WhatsApp y te enviamos la tasa actualizada del día según el monto y la dirección del cambio.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num"></div>
+            <div>
+              <h4>Confirma tu operación</h4>
+              <p>Nos dices cuánto quieres cambiar y a qué cuenta enviar. Te confirmamos el monto exacto a recibir.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num"></div>
+            <div>
+              <h4>Envías el pago</h4>
+              <p>Realizas el Pix o la transferencia y nos compartes el comprobante. Validamos la recepción.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num"></div>
+            <div>
+              <h4>Recibes tu dinero</h4>
+              <p>Acreditamos en el banco destino y te enviamos el comprobante final de la transferencia.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="section-eyebrow">Sobre nosotros</div>
+          <h2 class="section-title">Una casa de cambio <em>en la frontera.</em></h2>
+          <div class="about-text">
+            <p>
+              <strong style="color:var(--cream);">Cambios Vida</strong> trabaja en el mercado cambiario entre Brasil y Venezuela <strong style="color:var(--cream);">desde 2018</strong>, atendiendo a la comunidad venezolana en Brasil y a brasileños con necesidades del otro lado. En <strong style="color:var(--cream);">2024</strong> formalizamos la operación registrando la empresa en Pacaraima, Roraima — la ciudad fronteriza entre ambos países.
+            </p>
+            <p>
+              Conocemos bien las dos monedas, los dos sistemas bancarios y las realidades de quienes viven a caballo entre ambos países. Por eso nuestro servicio combina rapidez con atención humana: cada operación pasa por una persona real.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="num">BRL</div>
+            <div class="lbl">Reales brasileños</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">VES</div>
+            <div class="lbl">Bolívares venezolanos</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">Pix</div>
+            <div class="lbl">Transferencia instantánea</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">P. Móvil</div>
+            <div class="lbl">Red bancaria venezolana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-eyebrow">Contacto</div>
+      <h2 class="section-title">Estamos <em>a un mensaje</em> de distancia.</h2>
+      <p class="section-lead">
+        La forma más rápida de comenzar una operación es por WhatsApp. Respondemos todos los días.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="https://wa.me/5595991460413?text=Hola,%20vengo%20de%20cambiosvida.com.br" rel="noopener">
+          <div class="label">WhatsApp</div>
+          <div class="value">+55 95 99146-0413</div>
+          <div class="detail">Atención principal — consultas y operaciones</div>
+        </a>
+
+        <a class="contact-card" href="mailto:cambiosvidabr@gmail.com">
+          <div class="label">Correo electrónico</div>
+          <div class="value">cambiosvidabr@gmail.com</div>
+          <div class="detail">Para consultas formales y documentación</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="logo" style="color: var(--cream);">
+            <div class="logo-mark" style="background: rgba(250,246,235,0.08); color: var(--gold-light);">CV</div>
+            <div class="logo-text">
+              <span class="logo-name" style="color: var(--cream);">Cambios Vida</span>
+              <span class="logo-tagline" style="color: var(--gold-light);">BRL ⇄ VES</span>
+            </div>
+          </a>
+          <p>Casa de cambio entre reales brasileños y bolívares venezolanos. Operando desde la frontera de Pacaraima, Roraima.</p>
+        </div>
+
+        <div>
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#como">Cómo funciona</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Dados da empresa</h5>
+          <ul>
+            <li>COMERCIOS VIDA RR LTDA</li>
+            <li>CNPJ: 62.296.257/0001-90</li>
+            <li>Pacaraima — Roraima, Brasil</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="legal">
+        <span>© 2026 COMERCIOS VIDA RR LTDA — Todos los derechos reservados.</span>
+        <span>cambiosvida.com.br</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a class="float-wa" href="https://wa.me/5595991460413?text=Hola,%20vengo%20de%20cambiosvida.com.br" aria-label="Abrir WhatsApp" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.9 11.9 0 0012 0C5.4 0 0 5.4 0 12c0 2.1.5 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.6 1.4 5.6 1.4h.1c6.6 0 12-5.4 12-12a11.9 11.9 0 00-3.4-8.3zM12 21.9h-.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 012 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 9.9-10 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5s-.7-1.8-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3z"/></svg>
+  </a>
+
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('section > .container > *').forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
+
+</body>
+</html>
