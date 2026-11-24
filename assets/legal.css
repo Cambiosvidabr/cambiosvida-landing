@@ -1,0 +1,30 @@
+:root {
+  --bg: #FEFCF7; --bg-dark: #0E4A3A; --gold: #C8A561; --gold-light: #E4CC99; --ink: #121212; --ink-muted: #5B5B53;
+  --border: #E0D9C4; --cream: #FAF6EB;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Manrope', system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; font-size: 17px;
+  -webkit-font-smoothing: antialiased; }
+a { color: var(--bg-dark); text-underline-offset: 2px; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+.topbar { border-bottom: 1px solid var(--border); background: var(--bg); }
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.logo-mark { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-dark); color: var(--cream); display: grid;
+  place-items: center; font-family: 'Fraunces', serif; font-weight: 600; font-size: 15px; }
+.logo-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 19px; }
+.idiomas { display: flex; gap: 14px; font-size: 15px; }
+.idiomas a { color: var(--ink-muted); text-decoration: none; }
+.idiomas a[aria-current="page"] { color: var(--bg-dark); font-weight: 600; text-decoration: underline; }
+.doc { padding-top: 40px; padding-bottom: 56px; }
+.doc h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(28px, 5vw, 38px); line-height: 1.2; color: var(--bg-dark); }
+.doc .sub { color: var(--ink-muted); margin: 8px 0 28px; }
+.doc h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 22px; color: var(--bg-dark); margin: 34px 0 10px;
+  padding-top: 14px; border-top: 1px solid var(--border); }
+.doc h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 19px; color: var(--bg-dark); margin: 26px 0 8px; }
+.doc p { margin: 0 0 12px; }
+.doc ul, .doc ol { margin: 0 0 14px 22px; }
+.doc li { margin-bottom: 8px; }
+.pie { background: var(--bg-dark); color: var(--cream); padding: 28px 0; font-size: 14px; }
+.pie p { margin: 0 0 6px; }
+.pie a { color: var(--gold-light); }

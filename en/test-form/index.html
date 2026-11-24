@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipient details (test) — Cambios Vida</title>
+  <meta name="description" content="Test version of the Cambios Vida recipient details form, for Meta's App Review. What you type is not sent anywhere, and nothing is stored in your browser." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0E4A3A" />
+  <link rel="stylesheet" href="/assets/legal.css" />
+  <style>
+    .prueba { background: #FFF4D6; border: 2px solid var(--gold); border-radius: 10px; padding: 14px 16px; margin: 0 0 26px; }
+    .prueba strong { color: var(--bg-dark); }
+    form { display: grid; gap: 18px; }
+    label, legend { font-weight: 600; display: block; margin-bottom: 6px; }
+    .ayuda { color: var(--ink-muted); font-size: 15px; margin: -2px 0 6px; }
+    input, select { width: 100%; font: inherit; padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px; background: #fff;
+      color: var(--ink); }
+    input:focus, select:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+    button, .boton { font: inherit; font-weight: 600; background: var(--bg-dark); color: var(--cream); border: 0; border-radius: 999px;
+      padding: 12px 26px; cursor: pointer; text-decoration: none; display: inline-block; }
+    .hecho { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+    .hecho p { margin-bottom: 14px; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="/"><span class="logo-mark">CV</span><span class="logo-name">Cambios Vida</span></a>
+      <span class="idiomas">Test page</span>
+    </div>
+  </header>
+  <main class="wrap doc">
+    <p class="prueba"><strong>TEST PAGE — Cambios Vida Conexión.</strong> This is a test version of our form, made for Meta's App Review.
+      Do not enter real data: use made-up data. What you type here is not sent anywhere, and nothing is stored in your browser.</p>
+    <h1>Who should receive the bolívares?</h1>
+    <p class="sub">Enter the details of the person who receives the money in Venezuela.</p>
+
+    <!-- No field names and no form action: even without the script, there is nothing to send. -->
+    <form id="formulario" autocomplete="off">
+      <div>
+        <label for="como">How do they receive it?</label>
+        <select id="como" required>
+          <option value="">Choose one</option>
+          <option>Bank transfer</option>
+          <option>Pago Móvil (mobile payment)</option>
+        </select>
+      </div>
+      <div>
+        <label for="banco">Bank</label>
+        <select id="banco" required>
+          <option value="">Choose one</option>
+          <option>Banesco</option>
+          <option>Mercantil</option>
+          <option>Banco de Venezuela</option>
+          <option>BBVA Provincial</option>
+          <option>BNC</option>
+          <option>Other bank</option>
+        </select>
+      </div>
+      <div>
+        <label for="cuenta">Account number or phone</label>
+        <p class="ayuda">Bank transfer: the 20-digit account number. Pago Móvil: the phone number.</p>
+        <input id="cuenta" type="text" inputmode="numeric" autocomplete="off" required />
+      </div>
+      <div>
+        <label for="cedula">ID number (cédula)</label>
+        <p class="ayuda">With its letter: V, E or J.</p>
+        <input id="cedula" type="text" autocomplete="off" required />
+      </div>
+      <div>
+        <label for="nombre">Full name</label>
+        <input id="nombre" type="text" autocomplete="off" required />
+      </div>
+      <div><button type="submit">Send</button></div>
+    </form>
+
+    <div id="hecho" class="hecho" tabindex="-1" hidden>
+      <p><strong>Test complete.</strong> What you typed was not sent anywhere, nothing was stored in your browser, and the form was
+        cleared.</p>
+      <p>You can close this page and go back to WhatsApp.</p>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="wrap">
+      <p><strong>COMERCIOS VIDA RR LTDA</strong> · CNPJ 62.296.257/0001-90</p>
+      <p><a href="/en/privacy/">Privacy Policy</a> · <a href="/en/terms/">Terms of Use</a></p>
+    </div>
+  </footer>
+  <script>
+    // TEST ONLY: the data never leaves this page. No request, no cookie, no storage: the form is cleared and hidden.
+    (function () {
+      var formulario = document.getElementById('formulario');
+      var hecho = document.getElementById('hecho');
+      formulario.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+        formulario.reset();
+        formulario.hidden = true;
+        hecho.hidden = false;
+        hecho.focus();
+      });
+    })();
+  </script>
+</body>
+</html>
